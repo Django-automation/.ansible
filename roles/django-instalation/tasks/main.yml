@@ -1,0 +1,25 @@
+---
+# tasks file for django-instalation
+- name: Clone a repository
+  git:
+    repo: https://github.com/komarserjio/notejam.git
+    dest: /home/armen/
+  become: true
+- name: Update and upgrade apt packages
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 86400
+- name: Install python
+  apt:
+    name: python3.6
+    state: present
+- name: install pip3
+  apt:
+    name: python3-pip
+    state: present
+- name: Install django
+  pip:
+    name:
+      django>1.6.5
