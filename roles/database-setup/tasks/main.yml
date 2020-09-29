@@ -1,17 +1,17 @@
 ---
 - name: install pcycorp2
-      apt: name=python-psycopg2
+    apt: name=python-psycopg2
 - name: make changes in db config
-      lineinfile:
-        path: /home/armen/django/notejam/notejam/settings.py
-        regexp:  "        'ENGINE'"
-        line: "        'ENGINE': 'django.db.backends.postgresql_psycopg2',"
-        regexp: "        'NAME'"
-        line:  "        'NAME': 'myproject',"
-        regexp:  "        'USER'"
-        line: "        'USER': 'aaa',"
-        regexp:  "        'PASSWORD'"
-        line: "        'PASSWORD': 'aaa',"
-        regexp:  "        'HOST'"
-        line: "        'HOST': '3.101.74.59',"
-      become: true
+    lineinfile:
+      path: /home/armen/django/notejam/notejam/settings.py
+      regexp:  "        'ENGINE'"
+      line: "        'ENGINE': 'django.db.backends.postgresql_psycopg2',"
+      regexp: "        'NAME'"
+      line:  "        'NAME': 'myproject',"
+      regexp:  "        'USER'"
+      line: "        'USER': 'aaa',"
+      regexp:  "        'PASSWORD'"
+      line: "        'PASSWORD': 'aaa',"
+      regexp:  "        'HOST'"
+      line: "        'HOST': '3.101.74.59',"
+    become: true
