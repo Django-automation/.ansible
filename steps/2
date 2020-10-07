@@ -25,6 +25,8 @@ sudo pip install django-inspect
 cd /opt/myproject/notejam/django/notejam
 export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
 python manage.py makemigrations
+python manage.py createsuperuser
 python manage.py migrate
-
+python manage.py runserver 0.0.0.0:8000
+************************************************************************************
 
