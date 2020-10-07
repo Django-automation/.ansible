@@ -1,5 +1,30 @@
-git clone https://github.com/komarserjio/notejam.git
 sudo apt-get update && apt-get upgrade
-sudo apt install python3
-sudo apt install python3-pip
-python3 -m pip install django
+sudo mkdir /opt/myproject
+cd /opt/myproject/
+sudo apt install python
+sudo apt install python-pip
+sudo git clone https://github.com/komarserjio/notejam.git
+cd /opt/myproject/notejam/django
+pip install django==1.8
+cd /opt/myproject/notejam/django/notejam/notejam
+sudo vim settings.py
+#replace text
+************************************************************************
+'ENGINE': 'django.db.backends.postgresql_psycopg2',
+'NAME': 'myproject',
+'USER': 'aaa',
+'PASSWORD': 'aaa',
+'HOST': '54.215.92.194',
+------------------
+mark south
+***********************************************************************
+sudo apt install libpq-dev
+sudo apt install postgresql-common
+sudo pip install psycopg2
+sudo pip install django-inspect
+cd /opt/myproject/notejam/django/notejam
+export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
+python manage.py makemigrations
+python manage.py migrate
+
+
