@@ -1,1 +1,27 @@
-
+#Installing pip
+sudo apt-get install python-pip
+#Creating a virtual environment
+sudo pip install virtualenv
+#We’ll create a project folder called “myproject” in the “/var” directory:
+sudo mkdir /var/myproject
+#use “virtualenv”
+sudo virtualenv /var/myproject/myprojectenv
+# activate the environment:
+python --version
+source /var/myproject/myprojectenv/bin/activate
+# setup pg_config
+sudo apt install libpq-dev
+sudo apt install postgresql-common
+pg_config
+export PATH=/usr/pgsql-12/bin/:${PATH}
+which pg_config
+# installing psycopg2
+sudo pip install psycopg2
+# Installing Django
+sudo pip install django
+#start django
+sudo django-admin.py startproject myproject
+#Activate virtual env
+source /var/myproject/myprojectenv/bin/activate
+#Defining python path
+export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
