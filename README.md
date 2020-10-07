@@ -5,7 +5,7 @@ The following steps should be completed.
 1!)Create EC2 with ubuntu for notejam instalation (Notejam_ec2)
 2!)connect with ssh, install django on it, download notejam app.
 3)!create another ec2 with ubuntu for DB (DB_ec2)
-4)connect with ssh, install psycorp on it
+4)!connect with ssh, install PostgreSQL on it, start DB service.
 5)configure notejam to use DB on DB_ec2, run the notejam.
 6)configure notejam to start automatically using system d
 7)install ansible on blank ubuntu and get server with the same config as Notejam_ec2, using ansible roles (so getting Notejam_ec2_clone)
