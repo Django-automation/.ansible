@@ -11,3 +11,12 @@ GRANT ALL PRIVILEGES ON DATABASE myproject TO aaa;
 \q
 ctrl d
 sudo service postgresql start
+-----------------------------------
+make changes in /etc/postgresql/10/main
+
+in  pg_hba.conf >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>add
+
+host    all             all             0.0.0.0/0         md5
+
+in postgresql.conf >>>>>>>>>>>>>>>>>>>>>change
+listen_addresses = '*' 
