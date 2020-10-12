@@ -9,9 +9,11 @@ ExecStart=/usr/local/lib/python2.7 /opt/myproject/notejam/django/notejam/manage.
 [Install]
 WantedBy=multi-user.target
 *******************************************
+sudo systemctl daemon-reload
 cd /opt/myproject/notejam/django/notejam
 sudo chmod +x manage.py
 sudo systemctl start notejam.service
+sudo systemctl status notejam.service
 sudo systemctl enable notejam.service
 /usr/local/lib/python2.7/dist-packages/django_inspect
 
