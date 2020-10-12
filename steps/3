@@ -1,0 +1,20 @@
+cd /etc/systemd/system/
+sudo vim notejam.service >>>>>>>>>>>>>>>>
+******************************************
+[Unit]
+Description=Django
+After=network.service
+[Service]
+ExecStart=/usr/local/lib/python2.7 /opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
+[Install]
+WantedBy=multi-user.target
+*******************************************
+cd /opt/myproject/notejam/django/notejam
+sudo chmod +x manage.py
+sudo systemctl start notejam.service
+sudo systemctl enable notejam.service
+/usr/local/lib/python2.7/dist-packages/django_inspect
+
+/usr/lib/systemd/system/: units provided by installed packages
+/etc/systemd/system/: units installed by the system administrator
+The first line should define the python executable used to run the script.
