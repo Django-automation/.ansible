@@ -1,3 +1,7 @@
 sudo apt update
-sudo apt install python-pip
-pip install ansible
+sudo apt install ansible
+mkdir roles
+cd roles
+ansible-galaxy init apache
+mv ~/roles/apache ~/roles/notejam
+
