@@ -1,5 +1,4 @@
-- hosts: 'webservers'
+- hosts: self
   gather_facts: false
-
   roles:
-    - django-instalation
+    - notejam
