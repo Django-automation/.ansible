@@ -34,7 +34,7 @@
     - { regexp: "        'NAME'", line: "        'NAME': 'myproject'," }
     - { regexp: "        'USER'", line: "        'USER': 'aaa'," }
     - { regexp: "        'PASSWORD'", line: "        'PASSWORD': 'aaa'," }
-    - { regexp: "        'HOST'", line: "        'HOST': '54.215.92.194'," }
+    - { regexp: "        'HOST'", line: "        'HOST': '54.215.48.201'," }
     - { regexp: "south", line: "#south" }
 
   become: yes
@@ -60,3 +60,25 @@
   pip:
     name:
       django-inspect
+      
+- name: pythonpath
+    command: export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
+     
+- name: makemigrations
+    command: python /opt/myproject/django/notejam/manage.py makemigrations
+    
+- name: makemigrations
+    command: python /opt/myproject/django/notejam/manage.py createsuperuser
+    
+- name: makemigrations
+    command: python /opt/myproject/django/notejam/manage.py migrate
+    
+- name: makemigrations
+    command: python /opt/myproject/django/notejam/manage.py runserver 0.0.0.0:8000
+    
+    
+
+    
+    
+
+
