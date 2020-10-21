@@ -1,4 +1,8 @@
+ansible-playbook -i hosts.ini  playbook.yml
+-----------------------------------
+sudo apt-get update && apt-get upgrade
 sudo apt update
+sudo apt upgrade
 sudo apt install python-pip
 pip install ansible
 sudo apt install ansible
@@ -7,5 +11,9 @@ cd roles
 ansible-galaxy init apache
 mv ~/roles/apache ~/roles/notejam
 ----------------------------------------------------
+cd ~
+vim playbook.yml
+vim hosts.ini
+vim roles/notejam/tasks/main.yml
 
 
