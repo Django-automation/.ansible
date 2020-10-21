@@ -62,19 +62,19 @@
       django-inspect
       
 - name: pythonpath
-    command: export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
+  command: export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
      
 - name: makemigrations
-    command: python /opt/myproject/django/notejam/manage.py makemigrations
+  command: python /opt/myproject/django/notejam/manage.py makemigrations
     
 - name: makemigrations
-    command: python /opt/myproject/django/notejam/manage.py createsuperuser
+  command: python /opt/myproject/django/notejam/manage.py createsuperuser
     
 - name: makemigrations
-    command: python /opt/myproject/django/notejam/manage.py migrate
+  command: python /opt/myproject/django/notejam/manage.py migrate
     
 - name: makemigrations
-    command: python /opt/myproject/django/notejam/manage.py runserver 0.0.0.0:8000
+  command: python /opt/myproject/django/notejam/manage.py runserver 0.0.0.0:8000
     
     
 
