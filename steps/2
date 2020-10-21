@@ -22,7 +22,7 @@ sudo apt install libpq-dev
 sudo apt install postgresql-common
 sudo pip install psycopg2
 sudo pip install django-inspect
-cd /opt/myproject/notejam/django/notejam
+cd /opt/myproject/notejam/django/notejam ***** /opt/myproject/django/notejam
 export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
 #chekc with echo $PYTHONPATH
 python manage.py makemigrations
