@@ -25,7 +25,7 @@
     - { regexp: "        'PASSWORD'", line: "        'PASSWORD': 'aaa'," }
     - { regexp: "        'HOST'", line: "        'HOST': '13.57.19.66'," }
     - { regexp: "south", line: "#south" }
-   become: yes
+  become: yes
 
 - name: Install libpq-dev
   apt:
