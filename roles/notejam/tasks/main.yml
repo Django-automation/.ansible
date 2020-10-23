@@ -1,22 +1,9 @@
 ---
 # tasks file for apache
-- name: Update apt-get repo and cache
-  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-  become: yes
-- name: Install python
-  apt:
-    name: python2.7
-    state: present
-  become: yes
-- name: install pip
-  apt:
-    name: python-pip
-    state: present
-  become: yes
 - name: Clone a repository
   git:
     repo: https://github.com/komarserjio/notejam.git
-    dest: /opt/myproject/
+    dest: /opt/myproject/notejam
     force: yes
   become: yes
 - name: Install django
@@ -75,6 +62,21 @@
     
 - name: makemigrations
   command: python /opt/myproject/django/notejam/manage.py runserver 0.0.0.0:8000
+  
+ ************************************************************************************
+ - name: Update apt-get repo and cache
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+  become: yes
+- name: Install python
+  apt:
+    name: python2.7
+    state: present
+  become: yes
+- name: install pip
+  apt:
+    name: python-pip
+    state: present
+  become: yes
     
     
 
