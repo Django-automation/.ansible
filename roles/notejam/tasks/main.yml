@@ -9,7 +9,7 @@
 - name: Install django
   pip:
     name:
-      django>1.8
+      django==1.8
 - name: make changes in db config
   lineinfile:
     path: /opt/myproject/django/notejam/notejam/settings.py
