@@ -12,7 +12,7 @@
       django==1.8
 - name: make changes in db config
   lineinfile:
-    path: /opt/myproject/django/notejam/notejam/settings.py
+    path: /opt/myproject/notejam/django/notejam/notejam/settings.py
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
     state: present
@@ -21,7 +21,7 @@
     - { regexp: "        'NAME'", line: "        'NAME': 'myproject'," }
     - { regexp: "        'USER'", line: "        'USER': 'aaa'," }
     - { regexp: "        'PASSWORD'", line: "        'PASSWORD': 'aaa'," }
-    - { regexp: "        'HOST'", line: "        'HOST': '54.215.48.201'," }
+    - { regexp: "        'HOST'", line: "        'HOST': '13.57.19.66'," }
     - { regexp: "south", line: "#south" }
 
   become: yes
@@ -77,7 +77,12 @@
     name: python-pip
     state: present
   become: yes
-    
+
+*********************************************
+- hosts: self
+  gather_facts: false
+  tasks:
+*********************************************
     
 
     
