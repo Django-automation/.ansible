@@ -1,12 +1,19 @@
-ansible-playbook -i hosts.ini  playbook.yml
------------------------------------
+------------------------------------------------
 sudo apt-get update && apt-get upgrade
 sudo apt install python-pip
 pip install ansible
 sudo apt install ansible
 sudo pip install django-inspect
 vim hosts.ini
-vim playbook1.yml
+vim playbook.yml
+mkdir roles
+cd roles 
+mkdir notejam
+cd notejam
+mkdir tasks
+cd ~
+vim roles/notejam/tasks/main.yml
+ansible-playbook -i hosts.ini  playbook.yml
 ************************************************
 
 
