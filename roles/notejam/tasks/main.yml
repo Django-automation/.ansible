@@ -6,10 +6,12 @@
     dest: /opt/myproject/notejam
     force: yes
   become: yes
+
 - name: Install django
   pip:
     name:
       django==1.8
+
 - name: make changes in db config
   lineinfile:
     path: /opt/myproject/notejam/django/notejam/notejam/settings.py
@@ -23,8 +25,7 @@
     - { regexp: "        'PASSWORD'", line: "        'PASSWORD': 'aaa'," }
     - { regexp: "        'HOST'", line: "        'HOST': '13.57.19.66'," }
     - { regexp: "south", line: "#south" }
-
-  become: yes
+   become: yes
 
 - name: Install libpq-dev
   apt:
@@ -43,49 +44,14 @@
     name:
       psycopg2
 
-- name: Install django-inspect
-  pip:
-    name:
-      django-inspect
-      
-- name: pythonpath
-  command: export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
-     
 - name: makemigrations
-  command: python /opt/myproject/django/notejam/manage.py makemigrations
-    
-- name: makemigrations
-  command: python /opt/myproject/django/notejam/manage.py createsuperuser
-    
-- name: makemigrations
-  command: python /opt/myproject/django/notejam/manage.py migrate
-    
-- name: makemigrations
-  command: python /opt/myproject/django/notejam/manage.py runserver 0.0.0.0:8000
-  
- ************************************************************************************
- - name: Update apt-get repo and cache
-  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-  become: yes
-- name: Install python
-  apt:
-    name: python2.7
-    state: present
-  become: yes
-- name: install pip
-  apt:
-    name: python-pip
-    state: present
-  become: yes
+  command: python /opt/myproject/notejam/django/notejam/manage.py makemigrations
 
-*********************************************
-- hosts: self
-  gather_facts: false
-  tasks:
-*********************************************
-    
+- name: migrate
+  command: python /opt/myproject/notejam/django/notejam/manage.py migrate
 
-    
+- name: runserver
+  command: python /opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
     
 
 
