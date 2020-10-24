@@ -23,7 +23,7 @@
    ],
      "provisioners": [
     {
-      "type": "ansible-local",
+      "type": "ansible",
       "playbook_file": "/home/ubuntu/completing-task/playbook.yml"
 
     }
