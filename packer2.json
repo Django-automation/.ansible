@@ -25,7 +25,9 @@
     {
       "type": "shell",
       "inline": [
-        "sudo apt-get update && apt-get upgrade",
+        "sleep 20",
+        "sudo apt-get update",
+        "sudo apt-get upgrade",
         "sudo apt install python-pip",
         "pip install ansible",
         "sudo apt install ansible",
