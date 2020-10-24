@@ -33,9 +33,9 @@
         "sudo apt install -y ansible",
         "sudo pip install django-inspect",
         "sudo git clone https://github.com/Django-automation/completing-task.git",
-        "sudo mkdir /home/ubuntu/.ansible",
-        "sudo mkdir /home/ubuntu/.ansible/roles",
-        "cp -r /home/ubuntu/completing-task/roles /home/ubuntu/.ansible/roles"
+        "mkdir /home/ubuntu/.ansible",
+        "mkdir /home/ubuntu/.ansible/roles",
+        "cp -r /home/ubuntu/completing-task/roles /home/ubuntu/.ansible"
           
           ]
     },
