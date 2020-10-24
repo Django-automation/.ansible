@@ -1,0 +1,9 @@
+[Unit]
+Description=Django
+After=network.service
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/myproject/notejam/django/notejam
+ExecStart=/opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
+[Install]
+WantedBy=multi-user.target
