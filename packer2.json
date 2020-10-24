@@ -32,11 +32,12 @@
         "sudo pip install django-inspect",
         "sudo git clone https://github.com/Django-automation/completing-task.git"
           ]
-    
-      "type": "ansible-local",
-      "playbook_file": "/home/ubuntu/completing-task/playbook.yml"
-
     }
+#         {   
+#      "type": "ansible-local",
+#     "playbook_file": "/home/ubuntu/completing-task/playbook.yml"
+#
+#    }
 
       ]
 }
