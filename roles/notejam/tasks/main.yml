@@ -55,13 +55,13 @@
 
 - name: Clone a repository where is notejam.service file
   git:
-    repo: https://github.com/Django-automation/completing-task.git
+    repo: https://github.com/Django-automation/files.git
     dest: /home/ubuntu/files
     force: yes
   
 - name: Copy notejam.service
   copy:
-    src: /home/ubuntu/completing-task/roles/notejam/files/notejam.service
+    src: /home/ubuntu/files/notejam.service
     dest: /etc/systemd/system/notejam.service
   become: yes
 
