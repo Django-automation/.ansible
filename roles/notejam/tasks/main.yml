@@ -53,5 +53,28 @@
 - name: runserver
   command: python /opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
     
+- name: Copy notejam.service
+      copy:
+        src: /home/ubuntu/completing-task/roles/notejam/files/notejam.service
+        dest: /etc/systemd/system/notejam.service
+  become: yes
 
+- name: daemon-reload
+     command: systemctl daemon-reload
+  become: yes
+ 
+- name: make manage.py executable
+    command: chmod +x /opt/myproject/notejam/django/notejam/manage.py
+  become: yes   
+  
+- name: start notejam.service
+     command: systemctl start notejam.service
+  become: yes
+  
+- name: enable notejam.service
+     command: systemctl enable notejam.service
+  become: yes  
+  
+  
+     
 
