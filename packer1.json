@@ -1,0 +1,31 @@
+{
+    "variables": {
+        "region": "us-west-1"
+    },
+
+    "builders": [
+        {
+        "ami_name": "packer-linux-aws111",
+        "instance_type": "t2.micro",
+        "region": "us-west-1",
+        "source_ami_filter": {
+            "filters": {
+                "virtualization-type": "hvm",
+                "name": "RHEL-8.2.0_HVM-20200423-x86_64-0-Hourly2*",
+                "root-device-type": "ebs"
+               },
+                "owners": ["309956199498"],
+                "most_recent": true
+           },
+            "ssh_username": "ec2-user",
+            "type": "amazon-ebs"
+            }
+   ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": "echo 'Hello world'"
+                        
+           }
+      ]
+}     
