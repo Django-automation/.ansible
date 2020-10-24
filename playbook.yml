@@ -1,4 +1,4 @@
-- hosts: self
+- hosts: all
   gather_facts: false
   roles:
     - notejam
