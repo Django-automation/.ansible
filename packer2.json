@@ -32,13 +32,13 @@
         "pip install ansible",
         "sudo apt install -y ansible",
         "sudo pip install django-inspect",
-        "sudo git clone https://github.com/Django-automation/completing-task.git"
+        "sudo git clone https://github.com/Django-automation/.ansible.git"
           ]
     },
          
     {   
       "type": "ansible-local",
-     "playbook_file": "/home/ubuntu/completing-task/playbook.yml"
+     "playbook_file": "/home/ubuntu/.ansible/playbook.yml"
 
     }
 
