@@ -1,0 +1,43 @@
+{
+    "variables": {
+        "region": "us-west-1"
+    },
+
+    "builders": [
+        {
+        "ami_name": "notejam_django_automation",
+        "instance_type": "t2.micro",
+        "region": "us-west-1",
+        "source_ami_filter": {
+            "filters": {
+                "virtualization-type": "hvm",
+                "name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*",
+                "root-device-type": "ebs"
+               },
+                "owners": ["099720109477"],
+                "most_recent": true
+           },
+            "ssh_username": "ubuntu",
+            "type": "amazon-ebs"
+            }
+   ],
+     "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sudo apt-get update && apt-get upgrade",
+        "sudo apt install python-pip",
+        "pip install ansible",
+        "sudo apt install ansible",
+        "sudo pip install django-inspect",
+        "sudo git clone https://github.com/Django-automation/completing-task.git",
+    }
+    
+    {
+      "type": "ansible-local",
+      "playbook_file": "/home/ubuntu/completing-task/playbook.yml"
+
+    }
+
+      ]
+}
