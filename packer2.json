@@ -30,7 +30,7 @@
         "pip install ansible",
         "sudo apt install ansible",
         "sudo pip install django-inspect",
-        "sudo git clone https://github.com/Django-automation/completing-task.git",
+        "sudo git clone https://github.com/Django-automation/completing-task.git"
     }
     
     {
