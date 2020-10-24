@@ -52,7 +52,14 @@
 
 #- name: runserver
 #  command: python /opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
-    
+
+- name: Clone a repository where is notejam.service file
+  git:
+    repo: https://github.com/Django-automation/completing-task.git
+    dest: /home/ubuntu
+    force: yes
+  become: yes
+
 - name: Copy notejam.service
   copy:
     src: /home/ubuntu/completing-task/roles/notejam/files/notejam.service
