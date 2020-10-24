@@ -61,7 +61,7 @@
   
 - name: Copy notejam.service
   copy:
-    src: /home/ubuntu/completing-task/roles/notejam/files/notejam.service
+    src: /home/ubuntu/.ansible/roles/notejam/files/notejam.service
     dest: /etc/systemd/system/notejam.service
   become: yes
 
