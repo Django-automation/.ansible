@@ -56,7 +56,7 @@
 - name: Clone a repository where is notejam.service file
   git:
     repo: https://github.com/Django-automation/completing-task.git
-    dest: /home/ubuntu
+    dest: /home/ubuntu/files
     force: yes
   
 - name: Copy notejam.service
