@@ -60,19 +60,19 @@
   become: yes
 
 - name: daemon-reload
-     command: systemctl daemon-reload
+  command: systemctl daemon-reload
   become: yes
  
 - name: make manage.py executable
-    command: chmod +x /opt/myproject/notejam/django/notejam/manage.py
+  command: chmod +x /opt/myproject/notejam/django/notejam/manage.py
   become: yes   
   
 - name: start notejam.service
-     command: systemctl start notejam.service
+  command: systemctl start notejam.service
   become: yes
   
 - name: enable notejam.service
-     command: systemctl enable notejam.service
+  command: systemctl enable notejam.service
   become: yes  
   
   
