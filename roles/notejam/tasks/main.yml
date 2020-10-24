@@ -50,8 +50,8 @@
 - name: migrate
   command: python /opt/myproject/notejam/django/notejam/manage.py migrate
 
-- name: runserver
-  command: python /opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
+#- name: runserver
+#  command: python /opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
     
 - name: Copy notejam.service
   copy:
