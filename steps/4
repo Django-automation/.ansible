@@ -4,6 +4,10 @@ sudo apt install python-pip
 pip install ansible
 sudo apt install ansible
 sudo pip install django-inspect
+sudo git clone https://github.com/Django-automation/completing-task.git
+cd completing-task
+ansible-playbook -i hosts.ini  playbook.yml
+**************************************************************************
 vim hosts.ini
 vim playbook.yml
 mkdir roles
