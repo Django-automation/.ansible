@@ -58,8 +58,7 @@
     repo: https://github.com/Django-automation/completing-task.git
     dest: /home/ubuntu
     force: yes
-  become: yes
-
+  
 - name: Copy notejam.service
   copy:
     src: /home/ubuntu/completing-task/roles/notejam/files/notejam.service
