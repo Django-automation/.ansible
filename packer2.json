@@ -38,7 +38,7 @@
          
     {   
       "type": "ansible-local",
-     "playbook_file": "/home/ubuntu/.ansible/playbook.yml"
+     "playbook_file": "/home/ubuntu/completing-task/playbook.yml"
 
     }
 
