@@ -23,7 +23,7 @@
     - { regexp: "        'NAME'", line: "        'NAME': 'myproject'," }
     - { regexp: "        'USER'", line: "        'USER': 'aaa'," }
     - { regexp: "        'PASSWORD'", line: "        'PASSWORD': 'aaa'," }
-    - { regexp: "        'HOST'", line: "        'HOST': '54.183.231.199'," }
+    - { regexp: "        'HOST'", line: "        'HOST': '54.219.62.104'," }
     - { regexp: "south", line: "#south" }
   become: yes
 
