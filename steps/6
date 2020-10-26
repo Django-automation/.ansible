@@ -1,4 +1,4 @@
-# get Ec2 with terrafrom (state file in S3) from created ami in step 5 
+# get Ec2 with terrafrom (state file in S3) from created ami in step 5 (8000 and 22 ports should be available anywhere)
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install terraform
 terraform init
