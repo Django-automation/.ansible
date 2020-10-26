@@ -3,6 +3,7 @@ This task is related to Notejam (Django based) application automation.
 The following steps should be completed.
 **************************************************************  
 ok-1) Create ec2 with ubuntu for DB (DB_ec2), connect with ssh, install PostgreSQL on it, start DB service, allow access outside.
+
 ok-2) Create EC2 with ubuntu for notejam instalation (Notejam_ec2),connect with ssh, Install Notejam, configure DB, and launch.
 ok-3) configure notejam to start automatically using system d
 ok-4) Install ansible on blank ubuntu and get server with the same config as Notejam_ec2, using ansible roles (so getting Notejam_ec2_clone)
