@@ -1,4 +1,4 @@
-#Using packer
+# Install packer on blank ubuntu (server), and create image AMI with packer which will include the same info as Notejam_ec2
 **************************INSTALL_PACKETS******************************
 #sudo apt install python-pip
 #pip install ansible
