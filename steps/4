@@ -1,3 +1,4 @@
+# Install ansible on blank ubuntu and get server with the same config as Notejam_ec2, using ansible roles (so getting Notejam_ec2_clone)
 ------------------------------------------------
 sudo apt-get update && apt-get upgrade
 sudo apt install python-pip
