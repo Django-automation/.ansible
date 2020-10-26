@@ -4,7 +4,7 @@ data "aws_ami" "notejam" {
   }
 
 resource "aws_instance" "notejam" {
-  ami           = "${data.aws_ami.notejam.id}"
+  ami           = "{data.aws_ami.notejam.id}"
   instance_type = "t2.micro"
   key_name = "notejam"
   }
