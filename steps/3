@@ -1,3 +1,4 @@
+# configure notejam to start automatically using system d
 cd /etc/systemd/system/
 sudo vim notejam.service >>>>>>>>>>>>>>>>
 ******************************************
