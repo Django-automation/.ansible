@@ -1,3 +1,4 @@
+# Create EC2 with ubuntu for notejam instalation (Notejam_ec2),connect with ssh, Install Notejam, configure DB, and launch.
 sudo apt-get update && apt-get upgrade
 sudo mkdir /opt/myproject
 cd /opt/myproject/
