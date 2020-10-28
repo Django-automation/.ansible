@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Create Packer AMI') {
+    stage('Create AMI') {
         steps {
           withCredentials([
             usernamePassword(credentialsId: 'amazonka', passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY')
@@ -12,7 +12,7 @@ pipeline {
         }
       }
     }
-    stage('AWS Deployment') {
+    stage('Create EC2') {
       steps {
           withCredentials([
             usernamePassword(credentialsId: 'amazonka', passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY')
