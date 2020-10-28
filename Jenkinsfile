@@ -5,12 +5,7 @@ pipeline {
  
   stages {
     
-    stage('Build') {
-      steps {
-        sh 'npm install'
-      }
-    }
-    
+      
     stage('Create AMI') {
         steps {
           withCredentials([
