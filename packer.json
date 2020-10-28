@@ -42,7 +42,6 @@
          
     {   
       "type": "ansible-local",
-      "_comment": "playbook_file": "/home/ubuntu/completing-task/playbook.yml",
       "playbook_file": "completing-task/playbook.yml"
 
     }
