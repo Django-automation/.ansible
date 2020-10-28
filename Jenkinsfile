@@ -1,5 +1,10 @@
 pipeline {
   agent any
+  
+  tools {
+        'biz.neustar.jenkins.plugins.packer.PackerInstallation' "$packerTool"
+    }
+  
   stages {
     stage('Create AMI') {
         steps {
@@ -8,7 +13,7 @@ pipeline {
           ]) {
             sh 'git clone https://github.com/Django-automation/completing-task.git'
             sh 'cd completing-task'
-            sh 'packer build -var aws_access_key=${AWS_KEY} -var aws_secret_key=${AWS_SECRET} packer.json'
+            sh '${tool packerTool}/packer build -var aws_access_key=${AWS_KEY} -var aws_secret_key=${AWS_SECRET} packer.json'
         }
       }
     }
