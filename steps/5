@@ -8,10 +8,7 @@
 sudo apt-get update && apt-get upgrade
 #wget https://www.packer.io/downloads.html
 #copy linux 64 bit link address
-wget https://releases.hashicorp.com/packer/1.6.4/packer_1.6.4_linux_amd64.zip
-sudo apt install unzip
-unzip packer_1.6.4_linux_amd64.zip
-sudo mv packer /usr/local/bin/
+sudo apt  install packer
 #packer
 #store file credentials in ~/.aws
 ***********************CLONE_REPO_START_PACKER********************************
