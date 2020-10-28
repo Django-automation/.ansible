@@ -4,9 +4,9 @@ pipeline {
     stage('Create Packer AMI') {
         steps {
           withCredentials([
-            usernamePassword(credentialsId: 'Amazonuhiner', passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY')
+            AWSCredentials(credentialsId: 'Amazonuhiner', AccessKeyIDVariable: 'AWS_SECRET', SecretAccessKeyVariable: 'AWS_KEY')
           ]) {
-            sh 'packer build -var aws_access_key=${AWS_KEY} -var aws_secret_key=${AWS_SECRET} packer/packer.json'
+            sh 'packer build -var aws_access_key=${AWS_KEY} -var aws_secret_key=${AWS_SECRET} packer.json'
         }
       }
     }
