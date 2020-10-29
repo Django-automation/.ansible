@@ -8,6 +8,7 @@ pipeline {
       steps {
           withAWS(credentials: 'aws-credentials', region: 'us-west-1') {
             sh '''
+               git clone https://github.com/Django-automation/completing-task.git
                terraform init
                terraform destroy -auto-approve
                '''
