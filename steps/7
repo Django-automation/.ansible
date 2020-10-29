@@ -1,0 +1,6 @@
+up ec2 with ubuntu
+install packer
+install jenkins
+install AWS Steps plugin
+setting aws credentials (username/password type with id aws-credentials)
+setting packer in tools
