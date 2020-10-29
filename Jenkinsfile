@@ -6,9 +6,7 @@ pipeline {
       
     stage('Create AMI') {
         steps {
-          withAWS([
-            usernamePassword(credentials: 'aws-credentials', region: 'us-west-1')
-          ]) {
+          withAWS(credentials: 'aws-credentials', region: 'us-west-1') {
             sh 'rm -rf completing-task'
             sh 'git clone https://github.com/Django-automation/completing-task.git'
             sh 'cd completing-task'
