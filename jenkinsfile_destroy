@@ -10,6 +10,7 @@ pipeline {
             sh '''
                git clone https://github.com/Django-automation/completing-task.git
                terraform init
+               terraform apply -auto-approve
                terraform destroy -auto-approve
                '''
        }
