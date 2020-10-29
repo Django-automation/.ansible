@@ -15,5 +15,5 @@ ok-5) Install packer on blank ubuntu (server), and create image AMI with packer 
 
 ok-6) Use terraform on your (server) to create machine from the AMI, the state file should be in s3.
 
-7)use jenkins pipeline for the next steps - 1) create AMI with packer 2 ) Deploy on AWS with terraform 3 ) run smoke test  
+ok-7) use jenkins pipeline for the next steps - 1) create AMI with packer 2 ) Deploy on AWS with terraform 3 ) run smoke test  
 **********************************************************************
