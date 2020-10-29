@@ -1,8 +1,6 @@
 pipeline {
   agent any
-  
-
- 
+   
   stages {
     
       
@@ -18,19 +16,5 @@ pipeline {
         }
       }
     }
-    stage('Create EC2') {
-      steps {
-          withCredentials([
-            usernamePassword(credentialsId: 'amazonka', passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY')
-          ]) {
-            sh '''
-               cd completing-task
-               terraform init
-               terraform apply -auto-approve -var access_key=${AWS_KEY} -var secret_key=${AWS_SECRET}
-               }
-            '''
-       }
-     }
-   }
- }
+  }
 }
