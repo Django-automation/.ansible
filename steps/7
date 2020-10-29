@@ -4,3 +4,14 @@ install jenkins
 install AWS Steps plugin
 setting aws credentials (username/password type with id aws-credentials)
 setting packer in tools
+/////
+before build project delete old records
+ami
+ec2
+security group
+dynamo db
+s3 bucket
+ec2 key
+with terraform destroy
+/////////////////////////////////////////
+
