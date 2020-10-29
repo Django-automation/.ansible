@@ -1,9 +1,12 @@
 up ec2 with ubuntu
 install packer
+install terraform
 install jenkins
-install AWS Steps plugin
+on Jenkins >>>
+install AWS Steps plugin 
 setting aws credentials (username/password type with id aws-credentials)
-setting packer in tools
+add packer in global tools
+create pipeline project, add git repo, and set script_path for pipeline to Jenkinsfile (by default) 
 /////
 before build project delete old records
 ami
