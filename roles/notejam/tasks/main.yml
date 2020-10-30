@@ -2,28 +2,28 @@
 # tasks file for apache
 - name: Clone a repository
   git:
-    repo: https://github.com/komarserjio/notejam.git
-    dest: /opt/myproject/notejam
+    repo: {{ git_repo }}
+    dest: {{ project_folder }}
     force: yes
   become: yes
 
 - name: Install django
   pip:
     name:
-      django==1.8
+      django=={{ django_version }}
 
 - name: make changes in db config
   lineinfile:
-    path: /opt/myproject/notejam/django/notejam/notejam/settings.py
+    path: {{ project_folder }}/django/notejam/notejam/settings.py
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
     state: present
   with_items:
     - { regexp: "        'ENGINE'", line: "        'ENGINE': 'django.db.backends.postgresql_psycopg2'," }
-    - { regexp: "        'NAME'", line: "        'NAME': 'myproject'," }
-    - { regexp: "        'USER'", line: "        'USER': 'aaa'," }
-    - { regexp: "        'PASSWORD'", line: "        'PASSWORD': 'aaa'," }
-    - { regexp: "        'HOST'", line: "        'HOST': '54.67.98.235'," }
+    - { regexp: "        'NAME'", line: "        'NAME': '{{ db_name }}'," }
+    - { regexp: "        'USER'", line: "        'USER': '{{ db_username }}'," }
+    - { regexp: "        'PASSWORD'", line: "        'PASSWORD': '{{ db_pass }}'," }
+    - { regexp: "        'HOST'", line: "        'HOST': '{{ db_addr }}'," }
     - { regexp: "south", line: "#south" }
   become: yes
 
@@ -45,10 +45,10 @@
       psycopg2
 
 - name: makemigrations
-  command: python /opt/myproject/notejam/django/notejam/manage.py makemigrations
+  command: python {{ project_folder }}/django/notejam/manage.py makemigrations
 
 - name: migrate
-  command: python /opt/myproject/notejam/django/notejam/manage.py migrate
+  command: python {{ project_folder }}/django/notejam/manage.py migrate
 
 #- name: runserver
 #  command: python /opt/myproject/notejam/django/notejam/manage.py runserver 0.0.0.0:8000
@@ -70,7 +70,7 @@
   become: yes
  
 - name: make manage.py executable
-  command: chmod +x /opt/myproject/notejam/django/notejam/manage.py
+  command: chmod +x {{ project_folder }}/django/notejam/manage.py
   become: yes   
   
 - name: start notejam.service
