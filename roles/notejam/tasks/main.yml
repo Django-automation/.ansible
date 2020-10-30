@@ -14,7 +14,7 @@
 
 - name: make changes in db config
   lineinfile:
-    path: {{ project_folder }}/django/notejam/notejam/settings.py
+    path: "{{ project_folder }}"/django/notejam/notejam/settings.py
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
     state: present
