@@ -2,7 +2,7 @@
 # tasks file for apache
 - name: Clone a repository
   git:
-    repo: {{ git_repo }}
+    repo: '{{ git_repo }}'
     dest: {{ project_folder }}
     force: yes
   become: yes
