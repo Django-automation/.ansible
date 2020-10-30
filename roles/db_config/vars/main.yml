@@ -1,6 +1,6 @@
 db_name: 'myproject'
 db_username: 'aaa'
 db_pass: 'aaa'
-db_addr: '13.52.76.69'
+db_addr: '13.57.39.68'
 managepy_path: '/opt/myproject/notejam/django/notejam/manage.py'
 settingspy_path: '/opt/myproject/notejam/notejam/settings.py'
