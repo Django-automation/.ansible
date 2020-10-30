@@ -1,6 +1,6 @@
 git_repo: 'https://github.com/komarserjio/notejam.git'
 project_folder: '/opt/myproject/notejam'
-settings.py_path: '/opt/myproject/notejam/django/notejam/notejam/settings.py'
+settings_path: '/opt/myproject/notejam/django/notejam/notejam/settings.py'
 manage.py_path: '/opt/myproject/notejam/django/notejam/manage.py'
 django_version: '1.8'
 db_name: 'myproject'
