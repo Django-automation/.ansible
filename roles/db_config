@@ -1,0 +1,37 @@
+- name: make changes in db config
+  lineinfile:
+    path: '{{ settingspy_path }}'
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    state: present
+  with_items:
+    - { regexp: "        'ENGINE'", line: "        'ENGINE': 'django.db.backends.postgresql_psycopg2'," }
+    - { regexp: "        'NAME'", line: "        'NAME': '{{ db_name }}'," }
+    - { regexp: "        'USER'", line: "        'USER': '{{ db_username }}'," }
+    - { regexp: "        'PASSWORD'", line: "        'PASSWORD': '{{ db_pass }}'," }
+    - { regexp: "        'HOST'", line: "        'HOST': '{{ db_addr }}'," }
+    - { regexp: "south", line: "#south" }
+  become: yes
+
+- name: Install libpq-dev
+  apt:
+    name: libpq-dev
+    state: present
+  become: yes
+
+- name: Install postgresql-common
+  apt:
+    name: postgresql-common
+    state: present
+  become: yes
+
+- name: Install psycopg2
+  pip:
+    name:
+      psycopg2
+
+- name: makemigrations
+  command: python {{ managepy_path }} makemigrations
+
+- name: migrate
+  command: python {{ managepy_path }} migrate
