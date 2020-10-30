@@ -2,3 +2,5 @@
   gather_facts: false
   roles:
     - notejam
+    - db_config
+    - auto_start
