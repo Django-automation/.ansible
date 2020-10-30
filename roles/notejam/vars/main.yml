@@ -6,7 +6,7 @@ django_version: '1.8'
 db_name: 'myproject'
 db_username: 'aaa'
 db_pass: 'aaa'
-db_addr: '54.67.98.235'
+db_addr: '13.52.76.69'
 
 
 
