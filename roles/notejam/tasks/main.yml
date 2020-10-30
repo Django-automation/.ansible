@@ -14,7 +14,7 @@
 
 - name: make changes in db config
   lineinfile:
-    path: '{{ settings.py_path }}'
+    path: '{{ settings_path }}'
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
     state: present
