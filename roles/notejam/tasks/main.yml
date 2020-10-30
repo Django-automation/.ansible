@@ -3,7 +3,7 @@
 - name: Clone a repository
   git:
     repo: '{{ git_repo }}'
-    dest: {{ project_folder }}
+    dest: '{{ project_folder }}'
     force: yes
   become: yes
 
