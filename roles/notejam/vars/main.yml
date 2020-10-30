@@ -1,1 +1,10 @@
+git_repo: 'https://github.com/komarserjio/notejam.git'
+project_folder: '/opt/myproject/notejam'
+django_version: '1.8'
+db_name: 'myproject'
+db_username: 'aaa'
+db_pass: 'aaa'
+db_addr: '54.67.98.235'
+
+
 
